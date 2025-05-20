@@ -4,7 +4,7 @@ import { Button } from "@repo/ui/button/button";
 import { Gradient } from "@repo/ui/gradient";
 import { TurborepoLogo } from "@repo/ui/turborepo-logo";
 import { ShineBorder } from "@repo/design-system/shine-border";
-
+import { ComponentShowcase } from "@/components/component-showcase";
 export default function Page() {
   return (
     <main className="flex flex-col items-center justify-between min-h-screen p-24">
@@ -82,7 +82,7 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <Button>Click me</Button>
+      <ComponentShowcase />
     </main>
   );
 }
