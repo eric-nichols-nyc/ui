@@ -3,30 +3,7 @@ import { Card } from "@repo/ui/card/card";
 import { Button } from "@repo/ui/button/button";
 import { Gradient } from "@repo/ui/gradient";
 import { TurborepoLogo } from "@repo/ui/turborepo-logo";
-
-const LINKS = [
-  {
-    title: "Docs",
-    href: "https://turborepo.com/docs",
-    description: "Find in-depth information about Turborepo features and API.",
-  },
-  {
-    title: "Learn",
-    href: "https://turborepo.com/docs/handbook",
-    description: "Learn more about monorepos with our handbook.",
-  },
-  {
-    title: "Templates",
-    href: "https://turborepo.com/docs/getting-started/from-example",
-    description: "Choose from over 15 examples and deploy with a single click.",
-  },
-  {
-    title: "Deploy",
-    href: "https://vercel.com/new",
-    description:
-      "Instantly deploy your Turborepo to a shareable URL with Vercel.",
-  },
-];
+import { ShineBorder } from "@repo/design-system/shine-border";
 
 export default function Page() {
   return (
@@ -76,6 +53,7 @@ export default function Page() {
             </div>
 
             <div className="flex justify-center items-center z-50">
+            <ShineBorder shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
               <TurborepoLogo />
             </div>
           </div>
@@ -105,13 +83,6 @@ export default function Page() {
         </div>
       </div>
       <Button>Click me</Button>
-      <div className="grid mb-32 text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        {LINKS.map(({ title, href, description }) => (
-          <Card href={href} key={title} title={title}>
-            {description}
-          </Card>
-        ))}
-      </div>
     </main>
   );
 }

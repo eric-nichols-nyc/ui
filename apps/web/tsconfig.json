@@ -5,7 +5,11 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@repo/design-system/*": ["../packages/design-system/src/*"]
+    }
   },
   "include": [
     "**/*.ts",
