@@ -2,6 +2,7 @@
 @import "@repo/tailwind-config";
 @import "@repo/ui/styles.css";
 @import "@repo/design-system/theme.css";
+/*  @import "@repo/ui/styles/ripple.css"; */
 
 :root {
   --foreground-rgb: 0, 0, 0;
