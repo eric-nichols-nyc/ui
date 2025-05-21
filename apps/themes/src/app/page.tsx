@@ -1,14 +1,19 @@
 "use client";
 import { ThemeToggler } from "@/components/theme-toggler";
-import { Display } from "@/components/display";
+import { DisplayContainer } from "@/components/display";
 import { Cards } from "@/components/cards";
-
+import Heading, { getHeadingSize } from "@/components/heading";
 export default function Home() {
   return (
-    <div className="items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <>
       <ThemeToggler />
-      <Display />
+      <DisplayContainer className="text-center gap-1 p-8 md:p-16 lg:p-24">
+        <Heading size="xl" className={"primaryText font-bold"}>
+          This is your theme
+        </Heading>
+        <span className={getHeadingSize("xs")}>Shadcn theme colors.</span>
+      </DisplayContainer>
       <Cards />
-    </div>
+    </>
   );
 }
